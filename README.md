@@ -24,7 +24,8 @@ new Chartist.Line('.ct-chart', {
   },
   plugins: [
     Chartist.plugins.ctThreshold({
-      threshold: 4
+      threshold: 4,
+      showIndicator: true
     })
   ]
 });
@@ -70,6 +71,7 @@ These are the default options of the threshold plugin. All options can be custom
 ```
 var defaultOptions = {
   threshold: 0,
+  showIndicator: false,
   classNames: {
     aboveThreshold: 'ct-threshold-above',
     belowThreshold: 'ct-threshold-below'

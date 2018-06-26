@@ -1,7 +1,7 @@
 {
   "name": "chartist-plugin-threshold",
   "description": "Threshold Plugin for Chartist.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Gion Kunz",
   "homepage": "https://gionkunz.github.io/chartist-plugin-threshold",
   "repository": {
@@ -36,14 +36,14 @@
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.7.0",
-    "grunt-contrib-jasmine": "~0.8.1",
-    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-jasmine": "~2.0.1",
+    "grunt-contrib-jshint": "~1.1.0",
     "grunt-contrib-uglify": "^0.6.0",
-    "grunt-umd": "~2.2.1",
     "grunt-newer": "^0.8.0",
-    "jasmine-fixture": "~1.2.2",
+    "grunt-umd": "~2.2.1",
+    "jasmine-fixture": "~2.0.0",
     "jshint-stylish": "~1.0.0",
-    "load-grunt-config": "^0.16.0",
+    "load-grunt-config": "^0.19.2",
     "time-grunt": "^1.0.0"
   },
   "engines": {
