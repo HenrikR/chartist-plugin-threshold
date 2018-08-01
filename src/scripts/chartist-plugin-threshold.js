@@ -71,6 +71,32 @@
       };
     }
 
+    // Ensure no width, height, x or y values are negative values, as they are invalid
+    if (aboveRect.x < 0) {
+      aboveRect.x = 0;
+    }
+    if (aboveRect.y < 0) {
+      aboveRect.y = 0;
+    }
+    if (aboveRect.width < 0) {
+      aboveRect.width = 0;
+    }
+    if (aboveRect.height < 0) {
+      aboveRect.height = 0;
+    }
+    if (belowRect.x < 0) {
+      belowRect.x = 0;
+    }
+    if (belowRect.y < 0) {
+      belowRect.y = 0;
+    }
+    if (belowRect.width < 0) {
+      belowRect.width = 0;
+    }
+    if (belowRect.height < 0) {
+      belowRect.height = 0;
+    }
+
     // Create mask for upper part above threshold
     defs
       .elem('mask', {
