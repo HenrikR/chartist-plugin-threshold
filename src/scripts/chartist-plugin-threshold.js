@@ -126,7 +126,7 @@
       // Select the group element within the chart or create a new one
       var group = data.svg.querySelector('g.ct-indicator') || data.svg.elem('g').addClass('ct-indicator');
       var textX, textY, line;
-      
+
       // Project the threshold values for the line and label
       if (data.options.horizontalBars) {
         textX = projectedThreshold;
@@ -191,16 +191,18 @@
           ) {
             // Cloning the original line path, mask it with the upper mask rect above the threshold and add the
             // class for above threshold
+            // Ensure the cloned path is added as the first element of the parent node
+            // Ref for `elem()`: https://github.com/gionkunz/chartist-js/blob/master/src/scripts/svg.js#L94
             data.element
               .parent()
-              .elem(data.element._node.cloneNode(true))
+              .elem(data.element._node.cloneNode(true), {}, '', true)
               .attr({
                 mask: 'url(#' + options.maskNames.aboveThresholdID + ')'
               })
               .addClass(options.classNames.aboveThreshold);
 
             // Use the original line path, mask it with the lower mask rect below the threshold and add the class
-            // for blow threshold
+            // for below threshold
             data.element
               .attr({
                 mask: 'url(#' + options.maskNames.belowThresholdID + ')'
